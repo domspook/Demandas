@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Demandas.Models.Permissao>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TP_PERMISSAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_CARGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIO_ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TP_PERMISSAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_CARGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIO_ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

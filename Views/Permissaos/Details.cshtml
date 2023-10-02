@@ -1,0 +1,42 @@
+﻿@model Demandas.Models.Permissao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Permissao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TP_PERMISSAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TP_PERMISSAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NM_CARGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NM_CARGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO_ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
